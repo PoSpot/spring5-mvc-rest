@@ -22,7 +22,6 @@ class CustomerServiceImplTest {
     public static final long ID = 1L;
     public static final String FIRST_NAME = "Po";
     public static final String LAST_NAME = "Po Po";
-    public static final String CUSTOMER_URI = "/shop/customers/1L";
 
     @Mock
     CustomerRepository customerRepository;
@@ -43,7 +42,6 @@ class CustomerServiceImplTest {
         customer.setId(ID);
         customer.setFirstName(FIRST_NAME);
         customer.setLastName(LAST_NAME);
-        customer.setCustomerUri(CUSTOMER_URI);
 
         Customer customer2 = new Customer();
         customer2.setId(2L);
@@ -64,7 +62,6 @@ class CustomerServiceImplTest {
         customer.setId(ID);
         customer.setFirstName(FIRST_NAME);
         customer.setLastName(LAST_NAME);
-        customer.setCustomerUri(CUSTOMER_URI);
         given(customerRepository.findByFirstName(anyString())).willReturn(customer);
 
         // when
@@ -74,6 +71,5 @@ class CustomerServiceImplTest {
         assertEquals(ID, dto.getId());
         assertEquals(FIRST_NAME, dto.getFirstName());
         assertEquals(LAST_NAME, dto.getLastName());
-        assertEquals(CUSTOMER_URI, dto.getCustomerUri());
     }
 }

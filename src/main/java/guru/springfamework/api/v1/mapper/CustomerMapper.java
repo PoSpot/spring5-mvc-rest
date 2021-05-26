@@ -8,5 +8,5 @@ import org.mapstruct.factory.Mappers;
 @Mapper
 public interface CustomerMapper {
     CustomerMapper INSTANCE = Mappers.getMapper(CustomerMapper.class);
-    CustomerDTO customerToCustomerDTO(Customer category);
+    CustomerDTO customerToCustomerDTO(Customer customer);
 }

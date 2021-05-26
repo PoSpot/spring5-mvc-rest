@@ -26,7 +26,7 @@ public class CustomerController {
         return new ResponseEntity<>(customerService.getCustomers(), HttpStatus.OK);
     }
 
-    @GetMapping("{firstName}")
+    @GetMapping("{firstName}")// name instead of id, just for fun
     public ResponseEntity<CustomerDTO> findCustomer(@PathVariable String firstName){
         return new ResponseEntity<>(customerService.findByFirstName(firstName), HttpStatus.OK);
     }
