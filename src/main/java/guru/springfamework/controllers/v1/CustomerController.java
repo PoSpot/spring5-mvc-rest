@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/customers/")
+@RequestMapping({"/api/v1/customers/", "/api/v1/customers"})
 public class CustomerController {
 
     private final CustomerService customerService;
